@@ -1,0 +1,16 @@
+# AutoHotkey / build outputs
+*.exe
+*.zip
+*.log
+*.tmp
+
+# Local configuration and diagnostics
+config.ini
+diagnostics*.txt
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
