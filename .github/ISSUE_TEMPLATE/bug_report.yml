@@ -1,0 +1,84 @@
+name: Bug 报告
+description: 报告启动、切换、语音或恢复输入法问题
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请勿提交密码、个人语音、隐私文本或完整输入日志。
+
+  - type: input
+    id: tool-version
+    attributes:
+      label: 工具版本
+      placeholder: 例如 0.1.0-beta
+    validations:
+      required: true
+
+  - type: input
+    id: doubao-version
+    attributes:
+      label: 豆包输入法版本
+      placeholder: 例如 0.8.0.08176
+    validations:
+      required: true
+
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows 版本
+      placeholder: 例如 Windows 11 24H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 工作模式
+      options:
+        - 两次点按
+        - 按住说话
+    validations:
+      required: true
+
+  - type: input
+    id: original-ime
+    attributes:
+      label: 触发前使用的输入法
+      placeholder: 例如搜狗输入法
+
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: 环境诊断内容
+      description: 从托盘菜单打开“环境诊断”并复制非敏感信息。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请按顺序说明如何出现问题。
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果与实际结果
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 检查项
+      options:
+        - label: 我已确认豆包输入法可以手动切换并正常使用语音。
+          required: true
+        - label: 我已退出其他监听相同触发键的旧脚本或工具。
+          required: true
+
